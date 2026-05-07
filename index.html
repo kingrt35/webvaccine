@@ -1,19 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>ระบบจองวัคซีน โรงพยาบาลจันทรุเบกษา</title>
 
   <script>
-    window.location.href =
-    "https://script.google.com/macros/s/AKfycbx1oN2dJz2I5wfHtB6A9Et6pXy5POI5s7v4ofH_Zqf2j2YkvILI9BVAIBeuWeG_zHLyQw/exec";
+    // Redirect ไป Google Apps Script
+    window.location.replace(
+      "https://script.google.com/macros/s/AKfycbx1oN2dJz2I5wfHtB6A9Et6pXy5POI5s7v4ofH_Zqf2j2YkvILI9BVAIBeuWeG_zHLyQw/exec"
+    );
   </script>
 
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:sans-serif;
+      background:#f5f5f5;
+    }
+
+    .loading{
+      text-align:center;
+    }
+
+    .spinner{
+      width:50px;
+      height:50px;
+      border:5px solid #ddd;
+      border-top:5px solid #1976d2;
+      border-radius:50%;
+      animation:spin 1s linear infinite;
+      margin:auto;
+    }
+
+    @keyframes spin{
+      100%{
+        transform:rotate(360deg);
+      }
+    }
+
+    h2{
+      margin-top:20px;
+      color:#333;
+    }
+  </style>
 </head>
+
 <body>
 
-กำลังโหลด...
+<div class="loading">
+  <div class="spinner"></div>
+  <h2>กำลังเข้าสู่ระบบจองวัคซีน...</h2>
+</div>
 
 </body>
 </html>
